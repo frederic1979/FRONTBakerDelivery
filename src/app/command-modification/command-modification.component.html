@@ -1,0 +1,27 @@
+
+<h1>MODIFICATION COMMANDE numéro : {{commandId}}</h1>
+
+
+<form [formGroup]="commandForm" (ngSubmit)="updateCommand(commandId,commandForm.value)">
+  <div>
+    <label for="quantity">Saisir la quantité:</label>
+    <input id="quantity" type="text" formControlName="quantity">
+  </div>
+
+  <div>
+    <label for="date">Saisir date :</label>
+    <input id="date" type="text" formControlName="date">
+  </div>
+
+  <div>
+    <label for="restaurantId">Saisir restaurantID :</label>
+    <input id="restaurantId" type="text" formControlName="restaurantId">
+  </div>
+
+
+  <button type="submit">Soumettre</button>
+
+
+</form>
+
+<button (click)="commandService.getCommandList()">Liste des commandes</button>

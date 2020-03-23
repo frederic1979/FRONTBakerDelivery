@@ -1,0 +1,23 @@
+<h1>CREATION RESTAURANT</h1>
+
+<form [formGroup]="restaurantForm" (ngSubmit)="postRestaurant(restaurantForm.value)">
+  <div>
+    <label for="name">Saisir le nom :</label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="email">Saisir email :</label>
+    <input id="email" type="text" formControlName="email">
+  </div>
+
+  <div>
+    <label for="adressePost">Saisir adresse postale:</label>
+    <input id="adressePost" type="text" formControlName="adressePost">
+  </div>
+
+
+  <button type="submit">Soumettre</button>
+
+</form>
+

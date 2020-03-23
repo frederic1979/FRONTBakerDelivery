@@ -1,0 +1,31 @@
+<h1>COMMAND PART</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>date</th>
+    <th>quantity</th>
+    <th>restaurantId</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let command of commandList">
+    <td>{{command.id}}</td>
+    <td>{{command.date}}</td>
+    <td>{{command.quantity}}</td>
+    <td>{{command.restaurantId}}</td>
+    <td>
+      <button (click)="deleteCommand(command.id)">X</button>
+    </td>
+    <td>
+      <button [routerLink]="['modificationCommand',command.id]">Modifier</button>
+    </td>
+  </tr>
+
+  <td>
+    <button (click)="getCommandList()">Liste des commandes</button>
+  </td>
+  </tbody>
+</table>
+

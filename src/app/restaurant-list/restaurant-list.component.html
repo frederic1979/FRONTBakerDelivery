@@ -1,0 +1,30 @@
+<h1>RESTAURANT PART</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let restaurant of restaurantList">
+    <td>{{restaurant.id}}</td>
+    <td>{{restaurant.name}}</td>
+    <td>
+      <button (click)="deleteRestaurant(restaurant.id)">X</button>
+    </td>
+    <td>
+      <button [routerLink]="['modificationResto',restaurant.id]">Modifier</button>
+    </td>
+  </tr>
+
+  <td>
+    <button (click)="getRestaurantList()">Liste des restaurants</button>
+  </td>
+  </tbody>
+</table>
+
+<td>
+  <button [routerLink]="['creationResto']">Créer new restaurant</button>
+</td>
