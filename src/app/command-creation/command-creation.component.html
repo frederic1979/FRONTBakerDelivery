@@ -1,1 +1,23 @@
-<p>command-creation works!</p>
+<h1>CREATION COMMANDE</h1>
+
+<form [formGroup]="commandForm" (ngSubmit)="postCommand(commandForm.value)">
+  <div>
+    <label for="quantity">Saisir le quantity :</label>
+    <input id="quantity" formControlName="quantity">
+  </div>
+
+  <div>
+    <label for="date">Saisir date :</label>
+    <input id="date" formControlName="date">
+  </div>
+
+  <div>
+    <label for="restaurantId">Saisir restaurantId:</label>
+    <input id="restaurantId" type="text" formControlName="restaurantId">
+  </div>
+
+
+  <button type="submit">Soumettre</button>
+
+</form>
+

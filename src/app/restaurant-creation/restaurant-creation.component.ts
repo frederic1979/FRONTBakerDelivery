@@ -21,16 +21,12 @@ export class RestaurantCreationComponent implements OnInit {
 
   });
 
-  newRestaurant = new Restaurant();
 
   ngOnInit() {
 
   }
 
   postRestaurant(restaurantForm) {
-    this.newRestaurant.name = restaurantForm.name;
-    this.newRestaurant.email = restaurantForm.email;
-    this.newRestaurant.adressePost = restaurantForm.addressePost;
 
     this.restaurantService.addRestaurant(restaurantForm).subscribe(
       (response) => {

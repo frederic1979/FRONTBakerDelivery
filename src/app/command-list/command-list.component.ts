@@ -31,8 +31,19 @@ export class CommandListComponent implements OnInit {
     );
   }
 
-  deleteCommand(commandId) {
-
+  deleteCommand(commandId/*:number*/) {
+    this.commandService.deleteCommand(commandId).subscribe(
+      (response) => {
+        console.log('resp :' + response);
+        /*this.restaurantList = response;*/
+      }, (err) => {
+        console.log('erreur : ' + err);
+      },
+      () => {
+        console.log('finishing deleting command');
+        this.getCommandList();
+      }
+    );
   }
 
 }

@@ -1,5 +1,6 @@
 <h1>RESTAURANT PART</h1>
 
+
 <table>
   <thead>
   <tr>
@@ -11,8 +12,8 @@
   <tr *ngFor="let restaurant of restaurantList">
     <td>{{restaurant.id}}</td>
     <td>{{restaurant.name}}</td>
-    <td>
-      <button (click)="deleteRestaurant(restaurant.id)">X</button>
+    <td >
+      <button  (click)="commandOrNot(restaurant.id)">X</button>
     </td>
     <td>
       <button [routerLink]="['modificationResto',restaurant.id]">Modifier</button>

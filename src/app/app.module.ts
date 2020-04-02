@@ -8,12 +8,12 @@ import {RestaurantListComponent} from './restaurant-list/restaurant-list.compone
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
-import { RestaurantCreationComponent } from './restaurant-creation/restaurant-creation.component';
 import { RestaurantModificationComponent } from './restaurant-modification/restaurant-modification.component';
 import { CommandModificationComponent } from './command-modification/command-modification.component';
 
 import { CommandCreationComponent } from './command-creation/command-creation.component';
-import { ServiceComponent } from './service/service.component';
+import {RestaurantCreationComponent} from './restaurant-creation/restaurant-creation.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { ServiceComponent } from './service/service.component';
     RestaurantModificationComponent,
     CommandModificationComponent,
     CommandCreationComponent,
-    ServiceComponent
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,7 @@ import { ServiceComponent } from './service/service.component';
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path: '', component: CommandListComponent },
+      {path: '', component: AppComponent },
 
       {path: 'creationResto', component: RestaurantCreationComponent},
       {path: 'creationCommand', component: CommandCreationComponent},

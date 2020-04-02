@@ -15,7 +15,7 @@
     <td>{{command.date}}</td>
     <td>{{command.quantity}}</td>
     <td>{{command.restaurantId}}</td>
-    <td>
+    <td >
       <button (click)="deleteCommand(command.id)">X</button>
     </td>
     <td>
@@ -29,3 +29,6 @@
   </tbody>
 </table>
 
+<td>
+  <button [routerLink]="['creationCommand']">Créer new command</button>
+</td>
